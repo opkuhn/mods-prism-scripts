@@ -52,10 +52,14 @@ if args.nosig:
    # there is no sigma spectrum, create it by sqrt(obj)
    nosig = True
 
-if fileroot.find('m1b') != -1:
+if fileroot.find('mods2b') != -1:
    wavcal = "DualBlue_wav.txt"
-if fileroot.find('m1r') != -1:
+if fileroot.find('mods2r') != -1:
    wavcal = "DualRed_wav.txt"
+if fileroot.find('m1b') != -1:
+   wavcal = "BlueDir_wav.txt"
+if fileroot.find('m2r') != -1:
+   wavcal = "RedDir_wav.txt"
 
 objdat = fileroot + "_obj.list"
 skydat = fileroot + "_sky.list"
